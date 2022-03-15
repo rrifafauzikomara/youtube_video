@@ -28,6 +28,8 @@ dependencies:
   # Shared libraries
   component:
     path: shared_libraries/component
+  core:
+    path: shared_libraries/core
   dependencies:
     path: shared_libraries/dependencies
 
