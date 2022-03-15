@@ -11,6 +11,26 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
 
+  # Features
+  home:
+    path: features/home
+  in_video_content:
+    path: features/in_video_content
+
+  # Domains
+  video:
+    path: domains/video
+
+  # Resources
+  resources:
+    path: resources/resources
+
+  # Shared libraries
+  component:
+    path: shared_libraries/component
+  dependencies:
+    path: shared_libraries/dependencies
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
