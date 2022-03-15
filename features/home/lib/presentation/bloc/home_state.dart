@@ -1,22 +1,22 @@
 import 'package:equatable/equatable.dart';
-import 'package:video/domain/entities/test_entity.dart';
 import 'package:common/utils/state/view_data_state.dart';
+import 'package:video/domain/entities/youtube_video_entity.dart';
 
 class HomeState extends Equatable {
-  final ViewData<TestEntity> statusTest;
+  final ViewData<YouTubeVideoEntity> statusYouTubeVideo;
 
   const HomeState({
-    required this.statusTest,
+    required this.statusYouTubeVideo,
   });
 
   HomeState copyWith({
-    ViewData<TestEntity>? statusTest,
+    ViewData<YouTubeVideoEntity>? statusYouTubeVideo,
   }) {
     return HomeState(
-      statusTest: statusTest ?? this.statusTest,
+      statusYouTubeVideo: statusYouTubeVideo ?? this.statusYouTubeVideo,
     );
   }
 
   @override
-  List<Object?> get props => [statusTest];
+  List<Object?> get props => [statusYouTubeVideo];
 }

@@ -7,4 +7,11 @@ abstract class HomeEvent extends Equatable {
   List<Object?> get props => [];
 }
 
-class TestEvent extends HomeEvent {}
+class SearchVideo extends HomeEvent {
+  final String query;
+
+  const SearchVideo({required this.query});
+
+  @override
+  List<Object?> get props => [query];
+}

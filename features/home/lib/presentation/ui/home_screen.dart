@@ -12,7 +12,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   void _getVideo(BuildContext context) {
-    context.read<HomeBloc>().add(TestEvent());
+    context.read<HomeBloc>().add(const SearchVideo(query: 'android'));
   }
 
   @override
@@ -30,15 +30,16 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Center(
         child: BlocBuilder<HomeBloc, HomeState>(
           builder: (context, state) {
-            final status = state.statusTest.status;
+            final status = state.statusYouTubeVideo.status;
             if (status.isLoading) {
               return const CircularProgressIndicator();
             } else if (status.isError) {
-              return Text(state.statusTest.message);
+              return Text(state.statusYouTubeVideo.message);
             } else if (status.isNoData) {
               return const Text('No Data');
             } else if (status.isHasData) {
-              return Text(state.statusTest.data?.title ?? '');
+              return Text(
+                  '${state.statusYouTubeVideo.data?.items.length ?? 0}');
             } else {
               return const SizedBox();
             }

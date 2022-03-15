@@ -1,10 +1,12 @@
 import 'package:dependencies/dio/dio.dart';
-import 'package:video/data/models/test_dto.dart';
+
+import 'package:video/data/models/youtube_video_dto.dart';
+import 'package:common/utils/constant/api_constant.dart';
 
 abstract class VideoRemoteDataSource {
   const VideoRemoteDataSource();
 
-  Future<TestDTO> test();
+  Future<YouTubeVideoDTO> searchVideo(String query);
 }
 
 class VideoRemoteDataSourceImpl extends VideoRemoteDataSource {
@@ -15,10 +17,21 @@ class VideoRemoteDataSourceImpl extends VideoRemoteDataSource {
   });
 
   @override
-  Future<TestDTO> test() async {
+  Future<YouTubeVideoDTO> searchVideo(String query) async {
     try {
-      final response = await dio.get("/albums/1");
-      return TestDTO.fromJson(response.data);
+      final params = {
+        'part': 'snippet',
+        'channelId': ApiConstant.channelId,
+        'maxResults': 10,
+        'q': query,
+        'key': ApiConstant.apiKey,
+      };
+
+      final response = await dio.get(
+        ApiConstant.baseUrl + 'search?',
+        queryParameters: params,
+      );
+      return YouTubeVideoDTO.fromJson(response.data);
     } catch (e) {
       rethrow;
     }
