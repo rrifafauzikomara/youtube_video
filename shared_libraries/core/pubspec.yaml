@@ -1,6 +1,7 @@
 name: core
 description: A new Flutter package project.
 version: 0.0.1
+publish_to: "none"
 homepage:
 
 environment:
@@ -10,6 +11,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  # Shared libraries
+  dependencies:
+    path: ../dependencies
 
 dev_dependencies:
   flutter_test:

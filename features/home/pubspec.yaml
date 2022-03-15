@@ -1,6 +1,7 @@
 name: home
 description: A new Flutter package project.
 version: 0.0.1
+publish_to: "none"
 homepage:
 
 environment:
@@ -10,6 +11,18 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  # Domains
+  video:
+    path: ../../domains/video
+
+  # Shared libraries
+  common:
+    path: ../../shared_libraries/common
+  dependencies:
+    path: ../../shared_libraries/dependencies
+  core:
+    path: ../../shared_libraries/core
 
 dev_dependencies:
   flutter_test:

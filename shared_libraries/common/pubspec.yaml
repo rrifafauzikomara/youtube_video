@@ -1,4 +1,4 @@
-name: in_video_content
+name: common
 description: A new Flutter package project.
 version: 0.0.1
 publish_to: "none"
@@ -11,6 +11,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  # Shared libraries
+  dependencies:
+    path: ../dependencies
 
 dev_dependencies:
   flutter_test:

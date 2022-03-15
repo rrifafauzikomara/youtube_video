@@ -26,6 +26,8 @@ dependencies:
     path: resources/resources
 
   # Shared libraries
+  common:
+    path: shared_libraries/common
   component:
     path: shared_libraries/component
   core:
