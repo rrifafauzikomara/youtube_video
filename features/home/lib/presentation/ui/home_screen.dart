@@ -72,9 +72,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding: const EdgeInsets.all(10),
                         child: ListView.builder(
                           padding: EdgeInsets.zero,
-                          itemCount: videos.length,
+
+                          /// Why added -1, because the we hardcoded the first index for channel
+                          itemCount: videos.length - 1,
                           physics: const ClampingScrollPhysics(),
                           itemBuilder: (context, index) {
+                            /// Why added +1, because the we hardcoded the first index for channel
                             final video = videos[index + 1];
                             final youTubeImageUrl =
                                 video.snippet.thumbnails.medium.url;
