@@ -1,5 +1,5 @@
 import 'package:common/utils/arguments/detail_you_tube_video_argument.dart';
-import 'package:common/utils/constant/named_routes.dart';
+import 'package:resources/constant/named_routes.dart';
 import 'package:dependencies/bloc/bloc.dart';
 import 'package:dependencies/get_it/get_it.dart';
 import 'package:flutter/material.dart';

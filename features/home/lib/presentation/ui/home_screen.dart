@@ -1,5 +1,5 @@
 import 'package:common/utils/arguments/detail_you_tube_video_argument.dart';
-import 'package:common/utils/constant/named_routes.dart';
+import 'package:resources/constant/named_routes.dart';
 import 'package:common/utils/state/view_data_state.dart';
 import 'package:component/card/card_channel.dart';
 import 'package:component/card/card_youtube.dart';

@@ -16,6 +16,10 @@ dependencies:
   video:
     path: ../../domains/video
 
+  # Resources
+  resources:
+    path: ../../resources/resources
+
   # Shared libraries
   common:
     path: ../../shared_libraries/common
