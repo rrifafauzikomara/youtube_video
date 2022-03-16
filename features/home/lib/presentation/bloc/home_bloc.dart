@@ -39,6 +39,13 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   Stream<HomeState> _onSuccess(
     YouTubeVideoEntity? data,
   ) async* {
-    yield state.copyWith(statusYouTubeVideo: ViewData.loaded(data: data));
+    final videos = data?.items ?? [];
+    if (videos.isEmpty) {
+      yield state.copyWith(
+        statusYouTubeVideo: ViewData.noData(message: 'No Data'),
+      );
+    } else {
+      yield state.copyWith(statusYouTubeVideo: ViewData.loaded(data: data));
+    }
   }
 }

@@ -12,6 +12,14 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # Shared libraries
+  common:
+    path: ../../shared_libraries/common
+  component:
+    path: ../../shared_libraries/component
+  dependencies:
+    path: ../../shared_libraries/dependencies
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
