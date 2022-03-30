@@ -3,7 +3,7 @@ import 'package:resources/constant/named_routes.dart';
 import 'package:dependencies/bloc/bloc.dart';
 import 'package:dependencies/get_it/get_it.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_sample_video/di/injections.dart';
+import 'package:youtube_video/di/injections.dart';
 import 'package:home/presentation/bloc/bloc.dart';
 import 'package:home/presentation/ui/home_screen.dart';
 import 'package:in_video_content/presentation/ui/detail_you_tube_video_screen.dart';
