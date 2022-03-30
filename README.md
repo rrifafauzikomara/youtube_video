@@ -1,3 +1,9 @@
+### Resources 🔥
+
+* [Live Youtube](https://www.youtube.com/watch?v=d5yA9fL-lmU)
+* [Slide](https://docs.google.com/presentation/d/1eKI-QLp9XSVrp8e1_4nYcneAsakYjjhDmFxEiwSqUQc/edit?usp=sharing)
+
+
 ## Modularization Structure 🔥
 
     # Root Project
